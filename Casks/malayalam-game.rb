@@ -7,8 +7,6 @@ cask "malayalam-game" do
   desc "Malayalam learning game"
   homepage "https://github.com/kappakpr/malayalam-game"
 
-  no_quarantine true
-
   app "MalayalamGame.app"
 
   postflight do
