@@ -7,5 +7,13 @@ cask "malayalam-game" do
   desc "Malayalam learning game"
   homepage "https://github.com/kappakpr/malayalam-game"
 
-  app "MalayalamGame.app", no_quarantine: true
+  no_quarantine true
+
+  app "MalayalamGame.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/MalayalamGame.app"],
+                   sudo: false
+  end
 end
